@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>在树莓派上搭建BT下载机</title>
+      <link href="/zsh.github.io/2020/08/07/raspberrypi/"/>
+      <url>/zsh.github.io/2020/08/07/raspberrypi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="树莓派4-4G内存版，操作系统raspbian"><a href="#树莓派4-4G内存版，操作系统raspbian" class="headerlink" title="树莓派4 4G内存版，操作系统raspbian"></a>树莓派4 4G内存版，操作系统raspbian</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><p>使用qbittorrent</p><pre><code>sudo apt-get install qbittorrent-noxqbittorrent-nox --webui-port=8081 -d</code></pre><p>然后在浏览器里输入你的ip:8081  进入qbittorrent web UI<br>默认用户名admin ，密码adminadmin</p><h3 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h3><p>transmisson<br>更新树莓派：</p><pre><code>sudo apt-get install update</code></pre><p>安装transmission：</p><pre><code>sudo apt-get install transmission-daemon</code></pre><p>给用户授权：</p><pre><code>sudo usermod -a -G pi debian-transmission</code></pre><p>设置Transmission的配置文件：</p><pre><code>sudo vim /etc/transmission-daemon/settings.json</code></pre><p>设置下载目录为用户目录下的Downloads文件夹：<br>“download-dir”: “/home/pi/Downloads”,<br>设置未下载完成数据存放地点为Downloads文件夹：<br>“incomplete-dir”: “/home/pi/Downloads”,<br>设置Web登陆密码为：raspberry<br>“rpc-password”: “raspberry”,<br>设置Web登陆用户名：transmission<br>“rpc-username”: “transmission”,<br>允许Web登陆：（设置为true）<br>“utp-enabled”: true<br>设置完成之后，保存setting.json文件，重新启动transmission服务：</p><pre><code>sudo service transmission-daemon reload</code></pre><p>到这里可以在浏览器中输入你的树莓派的ip地址和端口号访问transmission的web界面了，比如你的树莓派地址是：192.168.1.10，那么在浏览器中输入：<br>192.168.1.10:9091<br>登陆的用户名和密码使用配置文件中设置的内容，例子中的用户名是：transmission，密码是：raspberry。<br>如果遇到permission问题，按照文中的下载地址，使用以下命令提升Downloads目录的权限：<br>sudo chmod 777 -R /home/pi/Downloads/<br>登陆到Web界面之后，点击左上角的文件夹图标可以添加种子文件，树莓派就会开始下载了。</p><p>至此可以一直挂机了</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Markdown基础教程</title>
       <link href="/zsh.github.io/2020/07/31/test/"/>
       <url>/zsh.github.io/2020/07/31/test/</url>
