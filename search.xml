@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>校园网网关不自动弹出的解决方案</title>
+      <link href="/zsh.github.io/2020/08/08/net/"/>
+      <url>/zsh.github.io/2020/08/08/net/</url>
+      
+        <content type="html"><![CDATA[<p>其实解决方法很简单，如果你的浏览器不弹出网关登录界面，手动输入以下IP地址，然后选择对应校区的认证页面在登录就可以了，是不是很简单。</p><pre><code>202.113.18.110</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学校 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网关 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>一文掌握：Matplotlib+Seaborn可视化</title>
       <link href="/zsh.github.io/2020/08/08/matplot/"/>
       <url>/zsh.github.io/2020/08/08/matplot/</url>
