@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Smith Chart using Matlab</title>
+      <link href="/zsh.github.io/2020/08/09/smithchart/"/>
+      <url>/zsh.github.io/2020/08/09/smithchart/</url>
+      
+        <content type="html"><![CDATA[<p><a href="http://www.matrixlab-examples.com/smith-chart.html">Smith Chart using Matlab</a></p><blockquote><h1 id="Smith-Chart-–-plots-with-Matlab"><a href="#Smith-Chart-–-plots-with-Matlab" class="headerlink" title="Smith Chart – plots with Matlab"></a>Smith Chart – plots with Matlab</h1><p><a href="http://www.matrixlab-examples.com/smith-chart.html#1_intro">1.- Aid for RF problems</a>  </p><p><a href="http://www.matrixlab-examples.com/smith-chart.html#2_reflection">2.- Calculate Reflection Coefficient, VSWR and Return loss</a>  </p><p><a href="http://www.matrixlab-examples.com/smith-chart.html#3_video">3.- Video: alternative code to draw the chart</a>  </p><h3 id="1-Useful-for-visualization-of-radio-frequency-and-transmission-line-problems"><a href="#1-Useful-for-visualization-of-radio-frequency-and-transmission-line-problems" class="headerlink" title="1.- Useful for visualization of radio frequency  and transmission line problems"></a>1.- Useful for visualization of radio frequency  and transmission line problems</h3><p>The Smith chart was created by Phillip H. Smith in 1939. It’s a graphical tool designed for electrical engineers specializing in radio frequency (RF) to solve problems related to transmission lines and matching circuits.<br> <br>Use of the Smith chart has grown over the years and it’s still used today, not only as a problem solving tool, but as a graphical display to show how RF parameters behave at one or more frequencies.   </p><p>(adsbygoogle=window.adsbygoogle||[]).push({});  </p><p> <br>The Smith chart can be used to represent many parameters including impedances, admittances, reflection and transmission coefficients, scattering parameters… </p><p>Normalized scaling allows the Smith chart to be used for problems involving any characteristic or system impedance which is represented by the center point of the chart. The most commonly used normalization impedance is 50 ohms. Once an answer is obtained through the graphical method, it is easy to convert between the normalized impedance and the corresponding unnormalized value by multiplying by the characteristic impedance. Reflection coefficients can be read directly from the chart. </p><p>Use of the Smith chart and the meaning of the results obtained requires a good understanding of AC circuits and transmission line theory, both of which are needed by RF engineers. </p><p>In the chart, there are horizontal circles that represent constant resistances; vertical circles represent constant reactances. The complex impedance (or admittance )is normalized using a reference, which usually is the characteristic impedance Z0. </p><p>The chart is part of current CAD tools and modern measurement equipments. It’s a graphic of the reflection coefficient in polar coordinates.  </p><p>Let’s create a chart with Matlab. </p><p>function draw_smith_chart </p><p>% Draw outer circle<br>t = linspace(0, 2*pi, 100);<br>x = cos(t);<br>y = sin(t);<br>plot(x, y, ‘linewidth’, 3); axis equal; </p><p>% Place title and remove ticks from axes<br>title(‘ Smith Chart ‘)<br>set(gca,’xticklabel’,{[]});<br>set(gca,’yticklabel’,{[]});<br>hold on </p><p>% Draw circles along horizontal axis<br>k = [.25 .5 .75];<br>for i = 1 : length(k)<br> x(i,:) = k(i) + (1 - k(i)) * cos(t);<br> y(i,:) = (1 - k(i)) * sin(t);<br> plot(x(i,:), y(i,:), ‘k’)<br>end </p><p>% Draw partial circles along vertical axis<br>kt = [2.5 pi 3.79 4.22];<br>k = [.5 1 2 4];<br>for i = 1 : length(kt)<br> t = linspace(kt(i), 1.5*pi, 50);<br> a(i,:) = 1 + k(i) * cos(t);<br> b(i,:) = k(i) + k(i) * sin(t);<br> plot(a(i,:), b(i,:),’k:’, a(i,:), -b(i,:),’k:’ )<br>end  </p><h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="2-Calculate-the-Reflection-Coefficient-VSWR-and-Return-Loss"><a href="#2-Calculate-the-Reflection-Coefficient-VSWR-and-Return-Loss" class="headerlink" title="2.- Calculate the Reflection Coefficient, VSWR and Return Loss"></a>2.- Calculate the Reflection Coefficient, VSWR and Return Loss</h3><p>Now, let’s prepare some formulas to calculate typical values used in RF theory. To plot a reflection coefficient we need a normalized impedance with magnitude and angle. It’s a good idea to deliver the angle in degrees to make it easier to visualize, and also let’s calculate the Voltage Standing Wave Ratio (VSWR) and the return loss.</p><p>function [m, thd, SWR, rloss] = smith_ch_calc(Z0, Zl) </p><p>% Draw appropriate chart<br>draw_smith_chart </p><p>% Normalize given impedance<br>zl = Zl/Z0; </p><p>% Calculate reflection, magnitude and angle<br>g = (zl - 1)/(zl + 1);<br>m = abs(g);<br>th = angle(g); </p><p>% Plot appropriate point<br>polar(th, m, ‘r*‘) </p><p>% Change radians to degrees<br>thd = th * 180/pi; </p><p>% Calculate VSWR and return loss.<br>% We can add epsilon to magnitude, to avoid div by 0 or log(0)<br>SWR = (1 + m)/(1 - m + eps);<br>rloss = -20 * log10(m + eps);</p><p>  Now, let’s try our functions:</p><p>clear, clc, close all, format compact<br>[m1, d1, VSWR1, Rloss1] = smith_ch_calc(50, 50)<br>[m2, d2, VSWR2, Rloss2] = smith_ch_calc(50, 100 + 50j)<br>[m3, d3, VSWR3, Rloss3] = smith_ch_calc(50, 30 - j*47) </p><p>and the results are:  </p><p> <img src="http://www.matrixlab-examples.com/image-files/xsmith-chart_001.gif.pagespeed.ic.io1ahoIhnA.png" alt="Smith Chart with Matlab"> </p><p>m1 = 0<br>d1 = 0<br>VSWR1 = 1.0000<br>Rloss1 = 313.0712 </p><p>m2 = 0.4472<br>d2 = 26.5651<br>VSWR2 = 2.6180<br>Rloss2 = 6.9897 </p><p>m3 =     0.5505<br>d3 =   -82.6171<br>VSWR3 =  3.4494<br>Rloss3 = 5.1848 </p><h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3><p>3.- Video: alternative code to draw the chart</p><p>This video shows an alternative code to draw the Smith Chart. You can pause the video to take appropriate notes…<br><video src="https://www.youtube.com/watch?v=Y9RFAal6-zw&feature=youtu.be" width="800px" height="600px" controls="controls"></video></p></blockquote><blockquote><p> <a href="http://www.matrixlab-examples.com/index.html">From ‘Smith Chart’ to home</a>  </p><p> <a href="http://www.matrixlab-examples.com/matlab-plot-2tier.html">From ‘Smith Chart’ to ‘2D Graphics Menu’</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 射频微波 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> matlab </tag>
+            
+            <tag> 史密斯圆图 </tag>
+            
+            <tag> Smith chart </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>A simulation tool for superconducting circuits</title>
       <link href="/zsh.github.io/2020/08/09/superconduct/"/>
       <url>/zsh.github.io/2020/08/09/superconduct/</url>
