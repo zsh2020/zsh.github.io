@@ -8,7 +8,7 @@
       <link href="/zsh.github.io/2020/12/07/layout/"/>
       <url>/zsh.github.io/2020/12/07/layout/</url>
       
-        <content type="html"><![CDATA[<table><thead><tr><th align="center">序号</th><th align="center">按部位分类</th><th align="center">技术规范内容</th></tr></thead><tbody><tr><td align="center">1</td><td align="center">PCB布线与布局</td><td align="center">PCB布线与布局隔离准则：强弱电流隔离、大小电压隔离，高低频率隔离、输入输出隔离、数字模拟隔离、输入输出隔离，分界标准为相差一个数量级。隔离方法包括：空间远离、地线隔开。</td></tr></tbody></table>]]></content>
+        <content type="html"><![CDATA[<table><thead><tr><th align="center">序号</th><th align="center">按部位分类</th><th align="center">技术规范内容</th></tr></thead><tbody><tr><td align="center">1</td><td align="center">PCB布线与布局</td><td align="center">PCB布线与布局隔离准则：强弱电流隔离、大小电压隔离，高低频率隔离、输入输出隔离、数字模拟隔离、输入输出隔离，分界标准为相差一个数量级。隔离方法包括：空间远离、地线隔开。</td></tr><tr><td align="center">2</td><td align="center">PCB布线与布局</td><td align="center">晶振要尽量靠近IC，且布线要较粗。</td></tr><tr><td align="center">3</td><td align="center">PCB布线与布局</td><td align="center">晶振外壳接地。</td></tr><tr><td align="center">4</td><td align="center">PCB布线与布局</td><td align="center">2</td></tr><tr><td align="center">5</td><td align="center">PCB布线与布局</td><td align="center">让模拟和数字电路分别拥有自己的电源和地线通路，在可能的情况下，应尽量加宽这两部分电路的电源与地线或采用分开的电源层与接地层，以便减小电源与地线回路的阻抗，减小任何可能在电源与地线回路中的干扰电压。</td></tr></tbody></table>]]></content>
       
       
       <categories>
