@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>在openwrt里安装ipk安装包</title>
+      <link href="/zsh.github.io/2021/01/18/openwrt_ipk/"/>
+      <url>/zsh.github.io/2021/01/18/openwrt_ipk/</url>
+      
+        <content type="html"><![CDATA[<p>首先将ipk安装包使用winscp等软件上传到/tmp目录下，然后使用putty或者xshell软件ssh 22端口进入软路由使用opkg命令安装。<br>``opkg install /tmp/**.ipk</p><p>```<br>如果显示缺少依赖和组件，请全部安装。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> openwrt </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> openwrt </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>word里面使用endnote插入的文献乱码</title>
       <link href="/zsh.github.io/2021/01/04/word%20endnote/"/>
       <url>/zsh.github.io/2021/01/04/word%20endnote/</url>
