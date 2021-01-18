@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>轻量方便的NAS共享文件方法</title>
+      <link href="/zsh.github.io/2021/01/18/gohttpfile/"/>
+      <url>/zsh.github.io/2021/01/18/gohttpfile/</url>
+      
+        <content type="html"><![CDATA[<p>首先在NAS套件中心下载Docker容器，在注册表一栏搜索gohttpfile下载。<br>下载完成后启动，点高级设置，卷挂载目录</p><pre><code>/app/public</code></pre><p>在环境一栏最下方，输入命令（密码认证可选）</p><pre><code>--auth-type http --auth-http username:password</code></pre><p>启用上传（可选，外网连接时建议不要开启）</p><pre><code>--upload</code></pre><p>启用删除（可选，外网连接时建议不要开启）</p><pre><code>--delete</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> NAS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> NAS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>在openwrt里安装ipk安装包</title>
       <link href="/zsh.github.io/2021/01/18/openwrt_ipk/"/>
       <url>/zsh.github.io/2021/01/18/openwrt_ipk/</url>
       
-        <content type="html"><![CDATA[<p>首先将ipk安装包使用winscp等软件上传到/tmp目录下，然后使用putty或者xshell软件ssh 22端口进入软路由使用opkg命令安装。</p><pre><code>opkg install /tmp/**.ipk</code></pre><p>如果显示缺少依赖和组件，请全部安装。</p>]]></content>
+        <content type="html"><![CDATA[<p>首先将ipk安装包使用winscp等软件上传到/tmp目录下，然后使用putty或者xshell软件ssh 22端口进入软路由使用opkg命令安装。</p><pre><code>opkg install /tmp/**.ipk</code></pre><p>如果显示缺少依赖和组件，请全部安装。</p><p>官网 <a href="https://openwrt.org/">https://openwrt.org/</a></p>]]></content>
       
       
       <categories>
