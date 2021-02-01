@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>解决ubuntu安装软件has install-snap change in progress错误</title>
+      <link href="/zsh.github.io/2021/02/01/ubuntusnap/"/>
+      <url>/zsh.github.io/2021/02/01/ubuntusnap/</url>
+      
+        <content type="html"><![CDATA[<p>在ubuntu软件商店安装vscode</p><p>报错：</p><p>无法安装visual studio code，snap vscode has install-snap change in process</p><p>原因：软件之前安装了一次，只是没安装完。</p><p>解决方法：</p><p>1、查看安装情况</p><pre><code>snap changes</code></pre><p>找到安装任务的ID</p><p>2、终止此ID任务，重新安装</p><pre><code>sudo snap abort ID</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ubuntu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SIS结的Ambegaokar-Baratoff方程拟合</title>
       <link href="/zsh.github.io/2021/01/18/ab-fitting/"/>
       <url>/zsh.github.io/2021/01/18/ab-fitting/</url>
