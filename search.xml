@@ -47,11 +47,11 @@
       
         <tags>
             
-            <tag> openwrt </tag>
+            <tag> ubuntu </tag>
             
             <tag> NAS </tag>
             
-            <tag> ubuntu </tag>
+            <tag> openwrt </tag>
             
             <tag> 树莓派 </tag>
             
@@ -78,9 +78,9 @@
       
         <tags>
             
-            <tag> ubuntu </tag>
-            
             <tag> AI </tag>
+            
+            <tag> ubuntu </tag>
             
             <tag> Python </tag>
             
