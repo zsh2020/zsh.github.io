@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>必应每日一图</title>
+      <link href="/zsh.github.io/2021/03/17/bing/"/>
+      <url>/zsh.github.io/2021/03/17/bing/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://xygeng.cn/post/199.html">必应Bing每日一图API - XY笔记 - 在这里，用代码串起一段一段故事</a></p><h2 id="每日一图"><a href="#每日一图" class="headerlink" title="每日一图"></a>每日一图</h2><p> 为了方便随机切换图片，我们可以使用必应每日一图来参考写出接口，方便我们切换图片和收集图片。全新代码构建，全新界面。</p><p> <a href="https://api.xygeng.cn/bing/index.html">页面展示</a></p><h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><h4 id="1、效果图"><a href="#1、效果图" class="headerlink" title="1、效果图"></a>1、效果图</h4><p> <img src="https://api.xygeng.cn/Bing/" alt="bing" title="bing"></p><h4 id="2、一图接口-新增，速度快"><a href="#2、一图接口-新增，速度快" class="headerlink" title="2、一图接口(新增，速度快)"></a>2、一图接口(新增，速度快)</h4><p> 接口：GET请求 <a href="https://api.xygeng.cn/test.html">API测试平台</a></p><pre><code> https://api.xygeng.cn/Bing/url/</code></pre><p> 结果：</p><pre><code> &#123;     &quot;code&quot;: 200,     &quot;data&quot;: &quot;http://cn.bing.com/th?id=OHR.OwlSunflowers_ZH-CN8154999485_1920x1080.jpg&amp;rf=LaDigue_1920x1080.jpg&amp;pid=hp&quot; &#125;</code></pre><p> JSON</p><h4 id="3、每日一图"><a href="#3、每日一图" class="headerlink" title="3、每日一图"></a>3、每日一图</h4><pre><code> &lt;!-- html -- &lt;img src=&quot;https://api.xygeng.cn/Bing/&quot; alt=&quot;&quot;</code></pre><p> HTML</p><pre><code> &lt;!-- markdown -- ![bing](https://api.xygeng.cn/Bing/)</code></pre><p> Markdown</p><h4 id="4、一周七图"><a href="#4、一周七图" class="headerlink" title="4、一周七图"></a>4、一周七图</h4><p> 接口：GET请求 <a href="https://api.xygeng.cn/test.html">API测试平台</a></p><pre><code> https://api.xygeng.cn/Bing/week/</code></pre><p> 结果：</p><pre><code> &#123;     &quot;code&quot;: 200,     &quot;data&quot;: [         &quot;http://cn.bing.c224_1920x1080.jpg&amp;rf=LaDigue_1920x1080.jpg&quot;,         &quot;http://cn.bing.c224_1920x1080.jpg&amp;rf=LaDigue_1920x1080.jpg&quot;,         &quot;http://cn.bing.c224_1920x1080.jpg&amp;rf=LaDigue_1920x1080.jpg&quot;,         &quot;http://cn.bing.c224_1920x1080.jpg&amp;rf=LaDigue_1920x1080.jpg&quot;,         &quot;http://cn.bing.c224_1920x1080.jpg&amp;rf=LaDigue_1920x1080.jpg&quot;,         &quot;http://cn.bing.c224_1920x1080.jpg&amp;rf=LaDigue_1920x1080.jpg&quot;,         &quot;http://cn.bing.c224_1920x1080.jpg&amp;rf=LaDigue_1920x1080.jpg&quot;     ] &#125;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> VScode </tag>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>PCB和掩膜版设计软件</title>
       <link href="/zsh.github.io/2021/03/17/klayout/"/>
       <url>/zsh.github.io/2021/03/17/klayout/</url>
@@ -130,9 +157,9 @@
       
         <tags>
             
-            <tag> ubuntu </tag>
-            
             <tag> AI </tag>
+            
+            <tag> ubuntu </tag>
             
             <tag> Python </tag>
             
@@ -814,9 +841,9 @@
       
         <tags>
             
-            <tag> Comsol </tag>
-            
             <tag> Markdown </tag>
+            
+            <tag> Comsol </tag>
             
         </tags>
       
