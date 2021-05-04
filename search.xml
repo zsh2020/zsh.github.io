@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>愉快下载YT视频</title>
+      <link href="/zsh.github.io/2021/05/03/youtubedl/"/>
+      <url>/zsh.github.io/2021/05/03/youtubedl/</url>
+      
+        <content type="html"><![CDATA[<pre><code>pip install youtube-dl   pip install --upgrade youtube-dl</code></pre><p>批量下载</p><pre><code>youtube-dl --download-archive archive.txt --proxy 127.0.0.1:port &quot;https://www.youtube.com/playlist?list=....&quot;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 下载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> YT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>必应每日一图</title>
       <link href="/zsh.github.io/2021/03/17/bing/"/>
       <url>/zsh.github.io/2021/03/17/bing/</url>
