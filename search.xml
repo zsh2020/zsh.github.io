@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>使用HFSS查看矩形波导的TE和TM模式的截止频率</title>
+      <link href="/zsh.github.io/2021/05/10/tetm/"/>
+      <url>/zsh.github.io/2021/05/10/tetm/</url>
+      
+        <content type="html"><![CDATA[<p>对于具有特定尺寸的矩形波导，只有特定频率范围的电磁波适用于信号传播。频率低于第一截止频率的波被波导阻挡。频率高于第二模式的截止频率的波将导致模式共存，这将导致模式色散。</p><p>以WR284波导为例。根据公式算得其前五个截止频率分别为TE10=2.08 GHz，TE20=4.16 GHz，TE01=4.41 GHz，TE11=TM11=4.87 GHz。</p><p>使用HFSS建模(Ansys Electronics Desktop 2021 R1)，setup里面设置multi-frequency，3 GHz和6 GHz。<br>扫描类型-插值，线性，1-6 GHz。</p><p>开始仿真，结果后处理页面，选择S(2:*，1: *)，选中五个模式的S21。<br><img src="https://i.loli.net/2021/05/10/QW9hXdFqJS842Ye.jpg" alt="五个模式的S21"></p><p>频率为3 GHz时，在TE10模式下可以传输。<br><img src="https://i.loli.net/2021/05/10/Q76KCzNkh9vbpFT.jpg" alt="3 GHz时的TE10模的电场分布图"></p><p>频率为3 GHz时，在TE20模式下无法传输。<br><img src="https://i.loli.net/2021/05/10/n8QeoyvASul7Fqk.jpg" alt="3 GHz时的TE20模的电场分布图"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 射频微波 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HFSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>愉快下载YT视频</title>
       <link href="/zsh.github.io/2021/05/03/youtubedl/"/>
       <url>/zsh.github.io/2021/05/03/youtubedl/</url>
