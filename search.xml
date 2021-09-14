@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>None</title>
+      <link href="/zsh.github.io/2021/09/14/campus/"/>
+      <url>/zsh.github.io/2021/09/14/campus/</url>
+      
+        <content type="html"><![CDATA[<p>所谓的成长，所谓的毕业，不过是我们跨离了一个时代，以短暂的痛苦或快乐过渡，然后跨向另一个时代和另一个自己。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用HFSS查看矩形波导的TE和TM模式的截止频率</title>
       <link href="/zsh.github.io/2021/05/10/tetm/"/>
       <url>/zsh.github.io/2021/05/10/tetm/</url>
@@ -33,7 +46,7 @@
       <link href="/zsh.github.io/2021/05/03/youtubedl/"/>
       <url>/zsh.github.io/2021/05/03/youtubedl/</url>
       
-        <content type="html"><![CDATA[<pre><code>pip install youtube-dl   pip install --upgrade youtube-dl</code></pre><p>批量下载</p><pre><code>youtube-dl --download-archive archive.txt --proxy 127.0.0.1:port &quot;https://www.youtube.com/playlist?list=....&quot;</code></pre>]]></content>
+        <content type="html"><![CDATA[<pre><code>pip install youtube-dl   pip install --upgrade youtube-dl</code></pre><p>批量下载<br>列出可下载的视频ID和分辨率</p><pre><code>youtube-dl -F https://www.youtube.com/playlist?list=....</code></pre><p>下载对应ID的视频</p><pre><code>youtube-dl -f ID https://www.youtube.com/playlist?list=....</code></pre><p>下载字幕</p><pre><code>youtube-dl --sub-lang en --write-auto-sub --sub-format srt --skip-download URL</code></pre><pre><code>str or vtt or other format of subtitle</code></pre><p>字幕+视频下载</p><pre><code>youtube-dl --sub-lang en --write-auto-sub --sub-format vtt URL</code></pre>]]></content>
       
       
       <categories>
