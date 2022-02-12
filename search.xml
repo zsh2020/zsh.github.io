@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>公式识别</title>
+      <link href="/zsh.github.io/2022/02/12/math/"/>
+      <url>/zsh.github.io/2022/02/12/math/</url>
+      
+        <content type="html"><![CDATA[<p>##1. mathpix</p><p>##2. LaTeX-OCR</p><pre><code>https://github.com/lukas-blecher/LaTeX-OCR</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Latex </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>更新blog</title>
       <link href="/zsh.github.io/2022/02/12/update/"/>
       <url>/zsh.github.io/2022/02/12/update/</url>
