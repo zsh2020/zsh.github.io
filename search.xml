@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>更新blog</title>
+      <link href="/zsh.github.io/2022/02/12/update/"/>
+      <url>/zsh.github.io/2022/02/12/update/</url>
+      
+        <content type="html"><![CDATA[<h2 id="更新blog"><a href="#更新blog" class="headerlink" title="更新blog"></a>更新blog</h2><pre><code>gulp build</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 建站 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>None</title>
       <link href="/zsh.github.io/2021/09/14/campus/"/>
       <url>/zsh.github.io/2021/09/14/campus/</url>
